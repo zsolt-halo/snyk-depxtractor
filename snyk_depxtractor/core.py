@@ -22,7 +22,7 @@ def core():
     dependencies = process_orgs_multi_thread(snyk_client, organizations)
     flattened_dependencies = _filter_dependency_data(dependencies)
 
-    _write_data_to_tsv(flattened_dependencies, f"dependencies-{timestamp}.csv")
+    _write_data_to_tsv(flattened_dependencies, f"dependencies-{timestamp}.tsv")
 
 
 def process_orgs_multi_thread(snyk_client: SnykClient, organizations: list) -> list:
