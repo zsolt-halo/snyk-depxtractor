@@ -1,17 +1,12 @@
 import os
 
 from concurrent.futures import ThreadPoolExecutor
-from csv import DictWriter
-from datetime import datetime
 
 from SnykClient import SnykClient  # pylint: disable=import-error
 from tqdm import tqdm
 
 
 def core():
-
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
     snyk_token = os.getenv("SNYK_TOKEN", None)
     assert snyk_token is not None, "SNYK_TOKEN environment variable is not set"
 
@@ -22,7 +17,7 @@ def core():
     dependencies = process_orgs_multi_thread(snyk_client, organizations)
     flattened_dependencies = _filter_dependency_data(dependencies)
 
-    _write_data_to_tsv(flattened_dependencies, f"dependencies-{timestamp}.tsv")
+    return flattened_dependencies
 
 
 def process_orgs_multi_thread(snyk_client: SnykClient, organizations: list) -> list:
@@ -117,15 +112,6 @@ def _filter_dependency_data(dependency_list: list) -> list:
             )
 
     return dependencies_duplicated_for_each_project
-
-
-def _write_data_to_tsv(data: list, filename: str) -> None:
-    with open(filename, "w") as f:
-        fieldnames = data[0].keys()
-        writer = DictWriter(f, fieldnames=fieldnames, delimiter="\t")
-        writer.writeheader()
-        for dependency in data:
-            writer.writerow(dependency)
 
 
 if __name__ == "__main__":
