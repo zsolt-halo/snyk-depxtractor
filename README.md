@@ -14,13 +14,14 @@ The tool uses 5 threads to process the organizations inside the group, and 4 thr
 
 - Extract all dependencies from a Snyk group into a csv in the local folder
 
-## Todo
-- [ ] Configure output folder/file
+## Todo / Roadmap
 - [x] Enable multiple output formats, json/parquet
 - [x] Pypi package
 - [X] CLI command
 - [ ] Proper docs/testing
-- [ ] Pipeline
+- [X] Pipeline
+- [ ] Filtering for orgs
+- [ ] Analytics and data deduplication
 
 ## Install
 
