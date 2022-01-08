@@ -7,7 +7,7 @@ The tool uses 5 threads to process the organizations inside the group, and 4 thr
 
 -   Free software: [GNU General Public License
     v3.0](https://github.com/zsolt-halo/snyk-depxtractor/blob/master/LICENSE)
--   Documentation: <https://snyk-dependency-extractor.readthedocs.io>.
+<!-- -   Documentation: <https://snyk-dependency-extractor.readthedocs.io>. -->
 
 ## Features
 
