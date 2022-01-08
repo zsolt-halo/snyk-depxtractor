@@ -13,9 +13,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Natural Language :: English",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
 ]
 include = [
     "docs",
@@ -28,18 +26,20 @@ include = [
 "Bug Tracker" = "https://github.com/zsolt-halo/snyk-depxtractor/issues"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 requests = "^2.27.1"
 tqdm = "^4.62.3"
+pandas = "^1.3.5"
+pyarrow = "^6.0.1"
 
 [tool.poetry.dev-dependencies]
-black = "^21.5b0"
+black = "^21.12b0"
 flake8 = "^3.9.1"
 isort = "^5.8.0"
-mypy = "^0.812"
 pip-tools = "^6.1.0"
 pre-commit = "^2.12.1"
 pylint = "^2.8.2"
+mypy = "^0.931"
 
 [tool.poetry.scripts]
 sde = "snyk_depxtractor.cli:main"

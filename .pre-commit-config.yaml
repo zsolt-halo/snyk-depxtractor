@@ -19,7 +19,7 @@ repos:
     name: black
     stages: [commit]
     language: system
-    entry: poetry run black
+    entry: poetry run black --target-version py310
     types_or: [python, pyi]
     require_serial: true
   - id: flake8
@@ -37,13 +37,14 @@ repos:
     types: [python]
     args: [--errors-only]
     require_serial: true
-  - id: mypy
-    name: mypy
-    stages: [commit]
-    language: system
-    entry: poetry run mypy
-    types: [python]
-    require_serial: true
+#   disable until match is not supported https://github.com/python/mypy/issues/11829
+#   - id: mypy
+#     name: mypy
+#     stages: [commit]
+#     language: system
+#     entry: poetry run mypy
+#     types: [python]
+#     require_serial: true
   - id: pytest
     name: pytest
     stages: [push]
