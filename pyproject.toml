@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "snyk_depxtractor"
-version = "0.1.2"
+version = "0.1.3"
 description = "Snyk Dependency Extractor"
 license = "GPL-3.0-only"
 authors = ["Zsolt Halo <net.zsolt.net@gmail.com>"]

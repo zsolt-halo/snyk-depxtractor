@@ -21,7 +21,7 @@ def cli():
 
 @click.argument(
     "output_format",
-    type=click.Choice(["tsv", "parquet", "json"], case_sensitive=False),
+    type=click.Choice(["tsv", "parquet", "json", "all"], case_sensitive=False),
 )
 @cli.command()
 def dump_group_deps(output_format):
@@ -37,6 +37,10 @@ def dump_group_deps(output_format):
             _save_data_to_parquet(dependencies, filename)
         case "json":
             _save_data_to_json(dependencies, filename)
+        case "all":
+            _write_data_to_tsv(dependencies, f"{filename}.tsv")
+            _save_data_to_parquet(dependencies, f"{filename}.parquet")
+            _save_data_to_json(dependencies, f"{filename}.json")
 
     click.echo(f"Dependencies written to {filename}")
 

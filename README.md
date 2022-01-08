@@ -34,7 +34,9 @@ pip install snyk-depxtractor
 ### Usage
 ```console
 export SNYK_TOKEN=xxxxxxx-xxxxxx-xxxx
-sde dump-group-deps [tsv,json,parquet]
+sde dump-group-deps [tsv,json,parquet,all]
+
+# all means tsv, json, parquet 🤓
 ```
 
 If you want to setup for development:
