@@ -2,8 +2,9 @@ import os
 
 from concurrent.futures import ThreadPoolExecutor
 
-from SnykClient import SnykClient  # pylint: disable=import-error
 from tqdm import tqdm
+
+from snyk_depxtractor.SnykClient import SnykClient  # pylint: disable=import-error
 
 
 def core():

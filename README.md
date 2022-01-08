@@ -17,8 +17,8 @@ The tool uses 5 threads to process the organizations inside the group, and 4 thr
 ## Todo
 - [ ] Configure output folder/file
 - [x] Enable multiple output formats, json/parquet
-- [ ] Pypi package
-- [ ] CLI command
+- [x] Pypi package
+- [X] CLI command
 - [ ] Proper docs/testing
 - [ ] Pipeline
 
@@ -27,26 +27,26 @@ The tool uses 5 threads to process the organizations inside the group, and 4 thr
 Use `pip` for install:
 
 ``` console
-# clone the repo and install the deps/enter venv
-$ poetry install
-$ poetry shell
-# export your Snyk token with group admin privs
-$ export SNYK_TOKEN=xxxxxxxx
-$ cd snyk_depxtractor
-$ python cli.py dump-group-deps
+pip install snyk-depxtractor
+```
+
+### Usage
+```console
+export SNYK_TOKEN=xxxxxxx-xxxxxx-xxxx
+sde dump-group-deps [tsv,json,parquet]
 ```
 
 If you want to setup for development:
 
 ``` console
-$ # Install poetry using pipx
-$ python -m pip install pipx
-$ python -m pipx ensurepath
-$ pipx install poetry
+# Install poetry using pipx
+python -m pip install pipx
+python -m pipx ensurepath
+pipx install poetry
 
-$ # Clone repository
-$ git clone https://github.com/zsolt-halo/snyk-depxtractor.git
-$ cd snyk-dependency-extractor/
+# Clone repository
+git clone https://github.com/zsolt-halo/snyk-depxtractor.git
+cd snyk-dependency-extractor/
 
 $ # Install dependencies and hooks
 $ poetry install
@@ -54,6 +54,6 @@ $ poetry run pre-commit install
 ```
 
 ## Known Issues
-`poetry build` produces a wheel which when installed, has some path issues and throws an error `from core import core`
+Pokemon exception handling, we catch them all.
 
 Will fix it eventually :)

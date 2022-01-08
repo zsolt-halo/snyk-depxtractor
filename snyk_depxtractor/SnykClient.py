@@ -4,7 +4,7 @@ from typing import Tuple
 
 import requests
 
-from SnykConstants import (  # pylint: disable=import-error
+from snyk_depxtractor.SnykConstants import (  # pylint: disable=import-error
     SnykAPIRoots,
     SnykAPIV1Resources,
 )

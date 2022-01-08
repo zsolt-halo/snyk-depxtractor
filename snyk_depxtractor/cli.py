@@ -6,9 +6,9 @@ from datetime import datetime
 import click
 import pandas as pd
 
-from core import core  # pylint: disable=import-error
-
 import snyk_depxtractor
+
+from snyk_depxtractor.core import core  # pylint: disable=import-error
 
 context_settings = dict(help_option_names=["-h", "--help"])
 

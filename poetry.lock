@@ -67,7 +67,7 @@ unicode_backport = ["unicodedata2"]
 name = "click"
 version = "8.0.3"
 description = "Composable command line interface toolkit"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -462,7 +462,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "3f4e7c3b50b947edb41bc4c19dc38eebdd093f8618bb4560672e856f37f9d8eb"
+content-hash = "9de38a39958a71af916360cd9a963202bad20de20fbe949c48d717a0b6b70e7e"
 
 [metadata.files]
 astroid = [
